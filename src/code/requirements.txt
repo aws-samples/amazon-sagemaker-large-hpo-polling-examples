@@ -1,0 +1,5 @@
+sagemaker==2.19.0
+smdebug
+ray
+ray[tune]
+tabulate
