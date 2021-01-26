@@ -18,7 +18,7 @@ First, the user specifies how many total trails they wish to run, and determine 
 
 Note that this code is intended for large scale HPO where you want to run thousands of jobs. If you have less than 500 max_jobs, simply run 1 HPO job. 
 
-The code uses the UCI dataset for credit card default (https://archive.ics.uci.edu/ml/datasets/default+of+credit+card+clients) as the base dataset and PyTorch as the framework. We also demonstrate how you can use custom metrics to optimize your SageMaker HPO jobs. Finally, we have provided separate scripts for you to run on both CPUs (*src/code/train_cpu.py*) and GPUs (*src/code/train.py*). The GPU code also includes the latest SageMaker Distributed Data Parallel library (https://docs.aws.amazon.com/sagemaker/latest/dg/data-parallel.html) to parallelize your data across multiple compute instances for single node multi GPU or multi node multi GPU use cases. 
+The code uses the UCI dataset for credit card default (https://archive.ics.uci.edu/ml/datasets/default+of+credit+card+clients) as the base dataset and PyTorch as the framework. We also demonstrate how you can use custom metrics to optimize your SageMaker HPO jobs. Finally, we have provided separate scripts for you to run on both CPUs (`src/code/train_cpu.py`) and GPUs (`src/code/train.py`). The GPU code also includes the latest SageMaker Distributed Data Parallel library (https://docs.aws.amazon.com/sagemaker/latest/dg/data-parallel.html) to parallelize your data across multiple compute instances for single node multi GPU or multi node multi GPU use cases. 
 
 Note, in order to run the notebook, replace the source_dir in the training estimator definition to: `./src/code`. 
 
@@ -39,7 +39,7 @@ In this repo, you can find the following items:
 
 Ray is a popular open source library that started with a paper from the RISE lab at UC Berkeley (https://docs.ray.io/en/latest/tune/index.html) for HPO. Ray integrates with many popular search algorithms as well as schedulers to optimize the HPO process. It also works with the popular frameworks: Keras, PyTorch, MxNet etc. 
 
-IN the notebook **pytorch_batch_hpo** we provide some code for you to try out Ray. As Ray requires some modifications to the standard SageMaker PyTorch training, we have provided 2 scripts: *src/code/rain_ray_cpu.py* and *src/code/train_ray.py* intended for single node CPU and GPU training using Ray.
+IN the notebook **pytorch_batch_hpo** we provide some code for you to try out Ray. As Ray requires some modifications to the standard SageMaker PyTorch training, we have provided 2 scripts: `src/code/rain_ray_cpu.py` and `src/code/train_ray.py` intended for single node CPU and GPU training using Ray.
 
 
 Enjoy!
