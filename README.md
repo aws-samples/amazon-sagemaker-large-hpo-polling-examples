@@ -20,6 +20,8 @@ Note that this code is intended for large scale HPO where you want to run thousa
 
 The code uses the UCI dataset for credit card default (https://archive.ics.uci.edu/ml/datasets/default+of+credit+card+clients) as the base dataset and PyTorch as the framework. We also demonstrate how you can use custom metrics to optimize your SageMaker HPO jobs. Finally, we have provided separate scripts for you to run on both CPUs (*src/code/train_cpu.py*) and GPUs (*src/code/train.py*). The GPU code also includes the latest SageMaker Distributed Data Parallel library (https://docs.aws.amazon.com/sagemaker/latest/dg/data-parallel.html) to parallelize your data across multiple compute instances for single node multi GPU or multi node multi GPU use cases. 
 
+Note, in order to run the notebook, replace the source_dir in the training estimator definition to: `./src/code`. 
+
 
 ### Motivation of using HPO queue
 
